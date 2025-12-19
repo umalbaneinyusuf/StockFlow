@@ -83,7 +83,7 @@ if language == "العربية":
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .stMarkdown, .stText, p, .stAlert, .stButton, .stDownloadButton {
+        .stMarkdown, .stText, p, .stButton, .stDownloadButton {
             text-align: right !important;
         }
 
@@ -92,6 +92,13 @@ if language == "العربية":
             text-align: right !important;
             overflow: hidden !important;
             white-space: nowrap !important;
+        }
+
+        section[data-testid="stSidebar"] .stMarkdown,
+        section[data-testid="stSidebar"] .stAlert,
+        section[data-testid="stSidebar"] p {
+            white-space: normal !important;
+            overflow-wrap: break-word !important;
         }
 
         button[kind="header"] {
