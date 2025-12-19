@@ -78,22 +78,33 @@ if language == "العربية":
             text-align: right;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4, h5, h6 {
             text-align: right !important;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .stMarkdown, .stText, p, .stAlert {
+        .stMarkdown, .stText, p, .stAlert, .stButton, .stDownloadButton {
             text-align: right !important;
         }
 
-        .stDataFrame {
+        section[data-testid="stSidebar"] {
             direction: rtl;
+            text-align: right !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
         }
+
+        button[kind="header"] {
+            left: 0 !important;
+            right: auto !important;
+            position: absolute !important;
+        }
+
+        .stDataFrame { direction: rtl; }
         [data-testid="stMetricLabel"] {
             width: 100%;
             text-align: right !important;
-             display: flex;
+            display: flex;
             flex-direction: row-reverse;
         }
         [data-testid="stMetricValue"] {
